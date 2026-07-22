@@ -1,3 +1,5 @@
+> **DEPRECATED — superseded by [static-ncino](https://github.com/kody-w/static-ncino) + [static-plaid](https://github.com/kody-w/static-plaid)** (real-product compatibility shapes). Endpoints stay live for old links; no updates.
+
 # static-loan-origination
 
 Deterministic, zero-dependency **loan origination & credit decisioning** simulator for the
