@@ -1,0 +1,12 @@
+{
+  "collections": {
+    "decisions": 3,
+    "referred_applications": 6
+  },
+  "disclaimer": "Independently authored simulator serving generic loan-origination REST shapes; all members, applications, and AI assessments synthetic; not affiliated with any financial institution or vendor; simulation only - never use for real financial activity.",
+  "epoch": "2026-01-15T12:00:00.000Z",
+  "joins": {
+    "static-core-banking": "application_number and member_number join https://kody-w.github.io/static-core-banking/api/v1/loan_applications.json"
+  },
+  "schema": "static-loan-origination/v1"
+}

@@ -1,0 +1,191 @@
+{
+  "count": 6,
+  "disclaimer": "Independently authored simulator serving generic loan-origination REST shapes; all members, applications, and AI assessments synthetic; not affiliated with any financial institution or vendor; simulation only - never use for real financial activity.",
+  "epoch": "2026-01-15T12:00:00.000Z",
+  "schema": "static-loan-origination/v1",
+  "value": [
+    {
+      "ai_assessment": {
+        "affordability": {
+          "disposable_income": 930.0,
+          "monthly_expenditure": 4310.0,
+          "monthly_income": 5240.0,
+          "open_banking_confidence": 0.94,
+          "source": "open_banking"
+        },
+        "anomaly_flags": [
+          "thin_credit_file"
+        ],
+        "bureau_score": 668,
+        "fraud_risk_score": 22,
+        "model_version": "scorecard-v4.2",
+        "rationale": "Scorecard sits just below the auto-approve cut-off (612 vs 640). Open Banking shows stable salaried income and a debt-service ratio of 41%. Recommend approval conditional on a 24-month term cap and no further unsecured credit in 90 days.",
+        "recommendation": "approve_with_conditions",
+        "scorecard_score": 612
+      },
+      "amount_requested": "12000.00",
+      "application_number": "LA-3002",
+      "channel": "digital",
+      "currency": "USD",
+      "member_name": "Wesley Trumbull",
+      "member_number": "MBR-2004",
+      "product": "personal",
+      "referred_at": "2026-01-12T09:14:00.000Z",
+      "sla_due_at": "2026-01-16T17:00:00.000Z",
+      "status": "pending_review"
+    },
+    {
+      "ai_assessment": {
+        "affordability": {
+          "disposable_income": 4385.0,
+          "monthly_expenditure": 7095.0,
+          "monthly_income": 11480.0,
+          "open_banking_confidence": 0.97,
+          "source": "open_banking"
+        },
+        "anomaly_flags": [
+          "undeclared_recurring_outflow"
+        ],
+        "bureau_score": 731,
+        "fraud_risk_score": 8,
+        "model_version": "scorecard-v4.2",
+        "rationale": "Strong bureau profile and 38% LTI, but Open Banking reveals a recent large recurring transfer not declared as a liability. Recommend approval conditional on evidence the transfer is discretionary savings, not undisclosed debt service.",
+        "recommendation": "approve_with_conditions",
+        "scorecard_score": 702
+      },
+      "amount_requested": "265000.00",
+      "application_number": "LA-3003",
+      "channel": "branch",
+      "currency": "USD",
+      "member_name": "Douglas Pemberton",
+      "member_number": "MBR-2006",
+      "product": "mortgage",
+      "referred_at": "2026-01-11T14:02:00.000Z",
+      "sla_due_at": "2026-01-18T17:00:00.000Z",
+      "status": "pending_review"
+    },
+    {
+      "ai_assessment": {
+        "affordability": {
+          "disposable_income": 1116.0,
+          "monthly_expenditure": 8004.0,
+          "monthly_income": 9120.0,
+          "open_banking_confidence": 0.88,
+          "source": "open_banking"
+        },
+        "anomaly_flags": [
+          "device_reuse",
+          "affordability_stress_fail"
+        ],
+        "bureau_score": 645,
+        "fraud_risk_score": 61,
+        "model_version": "scorecard-v4.2",
+        "rationale": "Affordability is the binding constraint: disposable income of $1,116/mo against a modeled repayment of $1,870/mo at stress rate. Fraud engine also flags a device previously linked to two abandoned applications. Recommend decline; invite re-application at lower principal.",
+        "recommendation": "decline",
+        "scorecard_score": 554
+      },
+      "amount_requested": "310000.00",
+      "application_number": "LA-3006",
+      "channel": "digital",
+      "currency": "USD",
+      "member_name": "Emmett Sorenson",
+      "member_number": "MBR-2012",
+      "product": "mortgage",
+      "referred_at": "2026-01-13T08:47:00.000Z",
+      "sla_due_at": "2026-01-17T17:00:00.000Z",
+      "status": "pending_review"
+    },
+    {
+      "ai_assessment": {
+        "affordability": {
+          "disposable_income": 1768.0,
+          "monthly_expenditure": 5122.0,
+          "monthly_income": 6890.0,
+          "open_banking_confidence": 0.79,
+          "source": "open_banking"
+        },
+        "anomaly_flags": [
+          "short_open_banking_history",
+          "document_quality"
+        ],
+        "bureau_score": 702,
+        "fraud_risk_score": 44,
+        "model_version": "scorecard-v4.2",
+        "rationale": "Scorecard passes but the fraud engine scores 44 on identity-document quality and the Open Banking consent covered only 62 days of history. Recommend manual identity verification before any offer is presented.",
+        "recommendation": "refer",
+        "scorecard_score": 648
+      },
+      "amount_requested": "33750.00",
+      "application_number": "LA-3007",
+      "channel": "digital",
+      "currency": "USD",
+      "member_name": "Vivian Ashcombe",
+      "member_number": "MBR-2013",
+      "product": "auto",
+      "referred_at": "2026-01-14T11:33:00.000Z",
+      "sla_due_at": "2026-01-16T12:00:00.000Z",
+      "status": "pending_review"
+    },
+    {
+      "ai_assessment": {
+        "affordability": {
+          "disposable_income": 1082.0,
+          "monthly_expenditure": 3388.0,
+          "monthly_income": 4470.0,
+          "open_banking_confidence": 0.96,
+          "source": "open_banking"
+        },
+        "anomaly_flags": [
+          "recent_prior_decline"
+        ],
+        "bureau_score": 655,
+        "fraud_risk_score": 17,
+        "model_version": "scorecard-v4.2",
+        "rationale": "Prior application LA-3008 was declined 4 months ago; income has since risen 18% and the previous delinquency has cured. Recommend approval conditional on 15% down payment given the recent adverse history.",
+        "recommendation": "approve_with_conditions",
+        "scorecard_score": 631
+      },
+      "amount_requested": "21900.00",
+      "application_number": "LA-3101",
+      "channel": "branch",
+      "currency": "USD",
+      "member_name": "Maribel Santoyo",
+      "member_number": "MBR-2015",
+      "product": "auto",
+      "referred_at": "2026-01-14T16:20:00.000Z",
+      "sla_due_at": "2026-01-19T17:00:00.000Z",
+      "status": "pending_review"
+    },
+    {
+      "ai_assessment": {
+        "affordability": {
+          "disposable_income": 3265.0,
+          "monthly_expenditure": 3945.0,
+          "monthly_income": 7210.0,
+          "open_banking_confidence": 0.91,
+          "source": "open_banking"
+        },
+        "anomaly_flags": [
+          "geo_mismatch",
+          "employer_mismatch"
+        ],
+        "bureau_score": 690,
+        "fraud_risk_score": 71,
+        "model_version": "scorecard-v4.2",
+        "rationale": "Income and affordability are sound, but the fraud engine scores 71: the application device and IP geolocate 1,400 miles from the member's transaction footprint, and the stated employer does not match salary credits. Recommend decline pending out-of-band member contact.",
+        "recommendation": "decline",
+        "scorecard_score": 597
+      },
+      "amount_requested": "15500.00",
+      "application_number": "LA-3102",
+      "channel": "digital",
+      "currency": "USD",
+      "member_name": "Silas Marchetti",
+      "member_number": "MBR-2010",
+      "product": "personal",
+      "referred_at": "2026-01-15T07:58:00.000Z",
+      "sla_due_at": "2026-01-15T19:00:00.000Z",
+      "status": "pending_review"
+    }
+  ]
+}

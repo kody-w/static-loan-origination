@@ -1,0 +1,41 @@
+{
+  "count": 3,
+  "disclaimer": "Independently authored simulator serving generic loan-origination REST shapes; all members, applications, and AI assessments synthetic; not affiliated with any financial institution or vendor; simulation only - never use for real financial activity.",
+  "epoch": "2026-01-15T12:00:00.000Z",
+  "schema": "static-loan-origination/v1",
+  "value": [
+    {
+      "agreed_with_ai": true,
+      "application_number": "LA-2961",
+      "decided_at": "2025-12-18T15:41:00.000Z",
+      "decision": "approved",
+      "member_name": "Priya Natarajan",
+      "member_number": "MBR-2003",
+      "product": "auto",
+      "rationale": "AI conditions verified: proof of income uploaded, term capped at 48 months.",
+      "underwriter": "J. Whitfield"
+    },
+    {
+      "agreed_with_ai": false,
+      "application_number": "LA-2977",
+      "decided_at": "2025-12-22T10:05:00.000Z",
+      "decision": "declined",
+      "member_name": "Hollis Vandermeer",
+      "member_number": "MBR-2008",
+      "product": "personal",
+      "rationale": "Overrode AI approve recommendation: member disclosed pending job change during call-back; affordability no longer holds.",
+      "underwriter": "R. Okafor"
+    },
+    {
+      "agreed_with_ai": true,
+      "application_number": "LA-2990",
+      "decided_at": "2026-01-04T09:12:00.000Z",
+      "decision": "approved",
+      "member_name": "Douglas Pemberton",
+      "member_number": "MBR-2006",
+      "product": "personal",
+      "rationale": "Agreed with AI: bridging loan repaid from verified bonus; conditions met same day.",
+      "underwriter": "J. Whitfield"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "endpoint": "https://kody-w.github.io/static-loan-origination/mcp/manifest.json",
+  "protocol_note": "STATIC SIMULATION of a loan-origination MCP server: tools/list is precomputed here, and each tool 'call' is an HTTP GET of its static_result_url ({count, value} REST shape). Point a real MCP client at a live loan-origination system instead and these tool contracts hold.",
+  "schema": "static-mcp/1.0",
+  "serverInfo": {
+    "name": "static-loan-origination-mcp",
+    "version": "1.0.0"
+  },
+  "tools": [
+    {
+      "description": "Query loan applications referred to human underwriters, each with the full AI-generated assessment (scorecard, bureau, fraud score, Open Banking affordability, recommendation, rationale).",
+      "inputSchema": {
+        "properties": {
+          "query": {
+            "description": "Optional filter text; empty returns all records.",
+            "type": "string"
+          }
+        },
+        "required": [],
+        "type": "object"
+      },
+      "name": "loan_query_referred_applications",
+      "static_result_url": "https://kody-w.github.io/static-loan-origination/api/v1/referred_applications.json"
+    },
+    {
+      "description": "Query historical underwriter decisions on referred applications, including rationale and whether the underwriter agreed with the AI recommendation (model feedback signal).",
+      "inputSchema": {
+        "properties": {
+          "query": {
+            "description": "Optional filter text; empty returns all records.",
+            "type": "string"
+          }
+        },
+        "required": [],
+        "type": "object"
+      },
+      "name": "loan_query_decisions",
+      "static_result_url": "https://kody-w.github.io/static-loan-origination/api/v1/decisions.json"
+    }
+  ]
+}

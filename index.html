@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Static Loan Origination — Bluegrass Credit Union</title>
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e; --accent: #d4a72c; --good: #3fb950;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 2rem 1rem 4rem; background: var(--bg); color: var(--text);
+    font: 16px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  main { max-width: 860px; margin: 0 auto; }
+  h1 { color: var(--accent); font-size: 1.5rem; }
+  h2 { font-size: 1.1rem; margin-top: 2.2rem; border-bottom: 1px solid var(--border); padding-bottom: .4rem; }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.2rem; margin: 1rem 0; }
+  code, pre { background: #010409; border: 1px solid var(--border); border-radius: 6px; }
+  code { padding: .1rem .4rem; }
+  pre { padding: .8rem 1rem; overflow-x: auto; }
+  a { color: var(--accent); }
+  .muted { color: var(--muted); font-size: .85rem; }
+  table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  td, th { text-align: left; padding: .35rem .6rem; border-bottom: 1px solid var(--border); }
+</style>
+</head>
+<body>
+<main>
+  <h1>static-loan-origination</h1>
+  <p>Deterministic, zero-dependency <strong>loan origination &amp; credit decisioning</strong> simulator
+  for the fictional <strong>Bluegrass Credit Union</strong>. Serves the human-in-the-loop layer of an
+  agentic loan flow: applications <em>referred to underwriters</em>, each carrying a full synthetic
+  AI assessment (scorecard, bureau, fraud score, Open Banking affordability, recommendation, rationale)
+  — plus historical underwriter decisions with model-feedback signals.</p>
+
+  <div class="panel muted">Independently authored simulator serving generic loan-origination REST
+  shapes; all members, applications, and AI assessments synthetic; not affiliated with any financial
+  institution or vendor; simulation only — never use for real financial activity.</div>
+
+  <h2>Endpoints</h2>
+  <table>
+    <tr><th>Collection</th><th>URL</th></tr>
+    <tr><td>Index</td><td><a href="api/v1/index.json">api/v1/index.json</a></td></tr>
+    <tr><td>Referred applications</td><td><a href="api/v1/referred_applications.json">api/v1/referred_applications.json</a></td></tr>
+    <tr><td>Underwriter decisions</td><td><a href="api/v1/decisions.json">api/v1/decisions.json</a></td></tr>
+    <tr><td>MCP manifest</td><td><a href="mcp/manifest.json">mcp/manifest.json</a></td></tr>
+  </table>
+
+  <h2>Shape</h2>
+  <pre>curl -s https://kody-w.github.io/static-loan-origination/api/v1/referred_applications.json
+{ "count": 6, "value": [ { "application_number": "LA-3002", ..., "ai_assessment": { ... } } ] }</pre>
+
+  <h2>Joins</h2>
+  <p><code>application_number</code> / <code>member_number</code> join
+  <a href="https://kody-w.github.io/static-core-banking/">static-core-banking</a> — the referred queue
+  here is the enrichment of that org's undecided applications (LA-3002, LA-3003, LA-3006, LA-3007).</p>
+
+  <p class="muted">Part of the <a href="https://github.com/kody-w?tab=repositories&q=static-">kody-w static-*</a>
+  family of deterministic integration simulators.</p>
+</main>
+</body>
+</html>
